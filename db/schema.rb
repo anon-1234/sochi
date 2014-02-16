@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140212022402) do
   create_table "athletes", force: true do |t|
     t.string "name"
     t.string "sport"
-    t.string "nationality"
+    t.string "country"
   end
 
 end

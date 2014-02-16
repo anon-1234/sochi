@@ -1,2 +1,7 @@
 @namespace 'Sochi.Helpers', (exports) ->
-  exports.preloadedJSON = {}
+  countriesJson=
+    'AUS': 'Australia'
+    'USA': 'United States'
+  exports.preloadedJSON =
+    fullCountryName: (countryCode) ->
+      countriesJson[countryCode] ? countryCode
