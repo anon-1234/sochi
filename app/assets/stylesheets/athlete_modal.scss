@@ -1,0 +1,40 @@
+.modal{
+	transition: opacity .25s ease-in-out;
+	opacity: 0;
+
+	&.active{
+		opacity: 1;
+	}
+	.modal_bg{
+		background: #333;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom:0;
+		right: 0;
+		z-index: 10;
+		opacity: 0.9;
+	}
+	.athlete_modal{
+		position:absolute;
+		left: 25%;
+		right: 25%;
+		top: 25%;
+		bottom: 25%;
+		background: #fff;
+		z-index: 20;
+		overflow-y: auto;
+	}
+	.close_modal{
+		cursor: pointer;
+		position: absolute;
+		right: 25%;
+		top: 25%;
+		line-height: 20px;
+		padding: 0 10px;
+		margin-top: -20px;
+		z-index: 20;
+		background: #d00;
+		color: #fff;
+	}
+}

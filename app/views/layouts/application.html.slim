@@ -3,7 +3,8 @@ doctype html
 html
   head
     = csrf_meta_tags
-  
+    = stylesheet_link_tag "application"
+
   body
     #application
       = yield
