@@ -10,7 +10,9 @@
         new Sochi.Models.Athlete(id: id)
         
       model.fetch
-        success: ->
-          console.log JSON.stringify(model)
+        success: =>
+          @showAthleteModal model
 
-
+    showAthleteModal: (model) ->
+      athleteModal = new Sochi.Views.AthleteModal(model: model)
+      athleteModal.appendTo('body')

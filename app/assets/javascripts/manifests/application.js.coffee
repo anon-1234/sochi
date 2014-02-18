@@ -3,7 +3,7 @@
 #== require jquery_ujs
 #== require underscore
 #== require backbone
-#== require handlebars.runtime
+#== require handlebars
 #== require thorax
 # ------------------------
 # Sochi

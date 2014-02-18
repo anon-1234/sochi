@@ -130,6 +130,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   coffee-rails (~> 4.0.0)
+  handlebars_assets
   jquery-rails
   mustache
   rails (= 4.0.2)
