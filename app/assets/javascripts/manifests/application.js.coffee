@@ -23,6 +23,7 @@
 #= require_tree ./../sochi/collections
 #
 #= require ./../sochi/view
+#= require ./../sochi/layout_view
 #= require_tree ./../sochi/helpers
 #= require_tree ./../sochi/views
 

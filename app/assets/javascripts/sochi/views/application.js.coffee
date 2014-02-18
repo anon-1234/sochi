@@ -1,7 +1,7 @@
 @namespace 'Sochi.Views', (exports) ->
   class exports.Application extends Sochi.View
     events:
-      "click a.athlete" : "moreInfo"
+      'click a.athlete' : 'moreInfo'
     
     moreInfo: (e) ->
       e.preventDefault()
@@ -13,6 +13,16 @@
         success: =>
           @showAthleteModal model
 
+    initialize: ->
+      # Using Thorax.LayoutView as a modal shell in order to take advantage of the built in
+      # ability to enforce a single view instance and handle dom/event teardown
+      @modalContainer = new Sochi.LayoutView()
+
+      @modalContainer.on 'close', ->
+        # tear down any active view from LayoutView
+        @setView()
+
+      @modalContainer.appendTo('body')
+
     showAthleteModal: (model) ->
-      athleteModal = new Sochi.Views.AthleteModal(model: model)
-      athleteModal.appendTo('body')
+      @modalContainer.setView new Sochi.Views.AthleteModal(model: model)
